@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-@Profile("!prod")
+@Profile("prod")
 @RequiredArgsConstructor
 public class InMemoryDatabaseInitializer {
 
