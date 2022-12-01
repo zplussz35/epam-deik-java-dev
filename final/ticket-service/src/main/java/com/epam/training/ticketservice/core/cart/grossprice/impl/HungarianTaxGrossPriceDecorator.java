@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.cart.grossprice.impl;
+/*package com.epam.training.ticketservice.core.cart.grossprice.impl;
 
 import com.epam.training.ticketservice.core.cart.Cart;
 import com.epam.training.ticketservice.core.cart.grossprice.GrossPriceCalculator;
@@ -15,3 +15,4 @@ public class HungarianTaxGrossPriceDecorator extends GrossPriceCalculatorDecorat
         return super.getAggregatedGrossPrice(cart).multiply(1.27);
     }
 }
+*/

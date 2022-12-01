@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.configuration;
+/*package com.epam.training.ticketservice.core.configuration;
 
 import com.epam.training.ticketservice.core.cart.Cart;
 import com.epam.training.ticketservice.core.cart.grossprice.GrossPriceCalculator;
@@ -26,3 +26,4 @@ public class ApplicationConfiguration {
         return new HungarianTaxGrossPriceDecorator(new GrossPriceCalculatorImpl());
     }
 }
+*/

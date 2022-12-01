@@ -1,6 +1,6 @@
-package com.epam.training.ticketservice.core.checkout.impl;
+/*package com.epam.training.ticketservice.core.checkout.impl;
 
-import com.epam.training.ticketservice.core.cart.Cart;
+//import com.epam.training.ticketservice.core.cart.Cart;
 import com.epam.training.ticketservice.core.cart.grossprice.GrossPriceCalculator;
 import com.epam.training.ticketservice.core.checkout.CheckoutService;
 import com.epam.training.ticketservice.core.checkout.model.OrderDto;
@@ -21,8 +21,9 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     @Override
     public OrderDto checkout(Cart cart) {
-        OrderDto orderDto = new OrderDto(cart.getProductDtoList(), cart.getAggregatedNetPrice(), grossPriceCalculator.getAggregatedGrossPrice(cart));
+        OrderDto orderDto = new OrderDto(cart.getMovieDtoList(), cart.getAggregatedNetPrice(), grossPriceCalculator.getAggregatedGrossPrice(cart));
         checkoutObservable.notifyObservers(orderDto);
         return orderDto;
     }
 }
+*/

@@ -14,7 +14,17 @@ public class UserCommand {
 
     private final UserService userService;
 
-    @ShellMethod(key = "user logout", value = "User logout")
+    @ShellMethod(key = "sign in privileged",value = "admin user login.")
+    public String adminLogin(String username, String password){
+        Optional<UserDto> user = userService.login(username, password);
+        if (user.isEmpty()) {
+            return "Login failed due to incorrect credentials";
+        }
+        return user.get() + " is successfully logged in!";
+
+    }
+
+    @ShellMethod(key = "sign out", value = "Admin logout")
     public String logout() {
         Optional<UserDto> user = userService.logout();
         if (user.isEmpty()) {
@@ -23,23 +33,29 @@ public class UserCommand {
         return user.get() + " is logged out!";
     }
 
-    @ShellMethod(key = "user login", value = "User login")
-    public String login(String username, String password) {
-        Optional<UserDto> user = userService.login(username, password);
-        if (user.isEmpty()) {
-            return "No such username or password!";
-        }
-        return user.get() + " is successfully logged in!";
-    }
-
-    @ShellMethod(key = "user print", value = "Get user information")
+    @ShellMethod(key = "describe account", value = "Get Administrator information")
     public String print() {
         Optional<UserDto> user = userService.describe();
         if (user.isEmpty()) {
-            return "You need to login first!";
+            return "You are not signed in!";
         }
-        return user.get().toString();
+        return "Signed in with privileged account '"+user.get().getUsername()+"'";
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @ShellMethod(key = "user register", value = "User registration")
     public String registerUser(String userName, String password) {

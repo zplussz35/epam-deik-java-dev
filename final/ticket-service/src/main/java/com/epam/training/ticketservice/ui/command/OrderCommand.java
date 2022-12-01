@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.ui.command;
+/*package com.epam.training.ticketservice.ui.command;
 
 import com.epam.training.ticketservice.core.checkout.impl.OrderService;
 import com.epam.training.ticketservice.core.checkout.model.OrderDto;
@@ -32,3 +32,4 @@ public class OrderCommand {
                 : Availability.unavailable("You are not logged in!");
     }
 }
+*/

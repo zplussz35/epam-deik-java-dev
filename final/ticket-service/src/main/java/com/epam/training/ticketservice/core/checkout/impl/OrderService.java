@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.impl;
+/*package com.epam.training.ticketservice.core.checkout.impl;
 
 import com.epam.training.ticketservice.core.checkout.CheckoutObserver;
 import com.epam.training.ticketservice.core.checkout.model.OrderDto;
@@ -6,7 +6,7 @@ import com.epam.training.ticketservice.core.checkout.persistance.model.Order;
 import com.epam.training.ticketservice.core.checkout.persistance.model.OrderItem;
 import com.epam.training.ticketservice.core.checkout.persistance.repository.OrderRepository;
 import com.epam.training.ticketservice.core.finance.money.Money;
-import com.epam.training.ticketservice.core.product.model.ProductDto;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.user.UserService;
 import com.epam.training.ticketservice.core.user.model.UserDto;
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
@@ -37,7 +37,7 @@ public class OrderService implements CheckoutObserver {
     private Order createOrderEntityFromDto(OrderDto orderDto, User user) {
         return Order.builder()
                 .user(user)
-                .orderItems(orderDto.getProductDtoList().stream()
+                .orderItems(orderDto.getMovieDtoList().stream()
                         .map(this::createOrderItemFromProduct)
                         .collect(Collectors.toList()))
                 .netPriceAmount(orderDto.getNetPrice().getAmount())
@@ -47,13 +47,13 @@ public class OrderService implements CheckoutObserver {
                 .build();
     }
 
-    public List<OrderDto> retrieveOrdersForUser(UserDto userDto) {
+    /*public List<OrderDto> retrieveOrdersForUser(UserDto userDto) {
         return orderRepository.findByUserUsername(userDto.getUsername()).stream()
                 .map(this::createOrderDtoFromEntity)
                 .collect(Collectors.toList());
     }
 
-    private OrderDto createOrderDtoFromEntity(Order order) {
+    /*private OrderDto createOrderDtoFromEntity(Order order) {
         return new OrderDto(
                 order.getOrderItems().stream().map(this::createProductFromOrderItem).collect(Collectors.toList()),
                 new Money(order.getNetPriceAmount(), Currency.getInstance(order.getNetPriceCurrencyCode())),
@@ -61,18 +61,19 @@ public class OrderService implements CheckoutObserver {
         );
     }
 
-    private ProductDto createProductFromOrderItem(OrderItem orderItem) {
-        return ProductDto.builder()
+    /*private MovieDto createProductFromOrderItem(OrderItem orderItem) {
+        return MovieDto.builder()
                 .withName(orderItem.getName())
                 .withNetPrice(new Money(orderItem.getNetPriceAmount(), Currency.getInstance(orderItem.getNetPriceCurrencyCode())))
                 .build();
     }
 
-    private OrderItem createOrderItemFromProduct(ProductDto productDto) {
+    private OrderItem createOrderItemFromProduct(MovieDto movieDto) {
         return OrderItem.builder()
-                .name(productDto.getName())
-                .netPriceAmount(productDto.getNetPrice().getAmount())
-                .netPriceCurrencyCode(productDto.getNetPrice().getCurrency().getCurrencyCode())
+                .name(movieDto.getName())
+                .netPriceAmount(movieDto.getNetPrice().getAmount())
+                .netPriceCurrencyCode(movieDto.getNetPrice().getCurrency().getCurrencyCode())
                 .build();
     }
 }
+*/

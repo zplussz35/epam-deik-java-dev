@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.cart.grossprice.impl;
+/*package com.epam.training.ticketservice.core.cart.grossprice.impl;
 
 import com.epam.training.ticketservice.core.cart.Cart;
 import com.epam.training.ticketservice.core.cart.grossprice.GrossPriceCalculator;
@@ -11,3 +11,4 @@ public class GrossPriceCalculatorImpl implements GrossPriceCalculator {
         return cart.getAggregatedNetPrice();
     }
 }
+*/

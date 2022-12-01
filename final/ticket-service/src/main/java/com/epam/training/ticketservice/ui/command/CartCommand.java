@@ -1,9 +1,9 @@
-package com.epam.training.ticketservice.ui.command;
+/*package com.epam.training.ticketservice.ui.command;
 
 import com.epam.training.ticketservice.core.cart.Cart;
 import com.epam.training.ticketservice.core.checkout.CheckoutService;
-import com.epam.training.ticketservice.core.product.ProductService;
-import com.epam.training.ticketservice.core.product.model.ProductDto;
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import lombok.AllArgsConstructor;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -16,20 +16,20 @@ public class CartCommand {
 
     private final Cart cart;
     private final CheckoutService checkoutService;
-    private final ProductService productService;
+    private final MovieService movieService;
 
     @ShellMethod(key = "user cart list", value = "List the cart content")
     public String cartList() {
-        if (cart.getProductDtoList().isEmpty()) {
+        if (cart.getMovieDtoList().isEmpty()) {
             return "The cart is empty!";
         } else {
-            return cart.getProductDtoList().toString();
+            return cart.getMovieDtoList().toString();
         }
     }
 
     @ShellMethod(key = "user cart checkout", value = "Checkout the cart")
     public String cartCheckout() {
-        if (cart.getProductDtoList().isEmpty()) {
+        if (cart.getMovieDtoList().isEmpty()) {
             return "You cannot checkout because cart is empty!";
         } else {
             return "Your order: " + checkoutService.checkout(cart);
@@ -38,7 +38,7 @@ public class CartCommand {
 
     @ShellMethod(key = "user cart clear", value = "Clear the cart")
     public String cartClear() {
-        if (cart.getProductDtoList().isEmpty()) {
+        if (cart.getMovieDtoList().isEmpty()) {
             return "You cannot clear your cart because it is empty!";
         } else {
             cart.clearCart();
@@ -48,7 +48,7 @@ public class CartCommand {
 
     @ShellMethod(key = "user cart addProduct", value = "Add product to cart")
     public String addProduct(String productName) {
-        Optional<ProductDto> optionalProduct = productService.getProductByName(productName);
+        Optional<MovieDto> optionalProduct = movieService.getProductByName(productName);
         if (optionalProduct.isEmpty()) {
             return productName + " is not found as a Product!";
         } else {
@@ -59,11 +59,11 @@ public class CartCommand {
 
     @ShellMethod(key = "user cart removeProduct", value = "Remove product from cart")
     public String removeProduct(String productName) {
-        Optional<ProductDto> optionalProduct = productService.getProductByName(productName);
+        Optional<MovieDto> optionalProduct = movieService.getProductByName(productName);
         if (optionalProduct.isEmpty()) {
             return productName + " is not found as a Product!";
         }
-        if (cart.getProductDtoList().contains(optionalProduct.get())) {
+        if (cart.getMovieDtoList().contains(optionalProduct.get())) {
             cart.removeProduct(optionalProduct.get());
             return productName + " is removed from your cart!";
         } else {
@@ -71,3 +71,4 @@ public class CartCommand {
         }
     }
 }
+*/
