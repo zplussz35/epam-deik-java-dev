@@ -8,7 +8,6 @@ import com.epam.training.ticketservice.core.room.persistence.entity.Room;
 
 public interface RoomRepository extends JpaRepository<Room, Integer> {
 
-
 	Room findByName(String name);
 
 	@Transactional

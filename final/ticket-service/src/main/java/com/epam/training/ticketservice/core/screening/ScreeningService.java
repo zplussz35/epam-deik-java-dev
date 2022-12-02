@@ -10,5 +10,5 @@ public interface ScreeningService {
 
 	void createScreening(ScreeningDto screeningDto);
 
-	Integer deleteScreening(String movieTitle,String roomName, String startTime);
+	Integer deleteScreening(String movieTitle, String roomName, String startTime);
 }

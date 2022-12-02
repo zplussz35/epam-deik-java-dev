@@ -9,10 +9,6 @@ import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
 
 import com.epam.training.ticketservice.core.room.RoomService;
-
-import com.epam.training.ticketservice.core.movie.MovieService;
-import com.epam.training.ticketservice.core.movie.model.MovieDto;
-import com.epam.training.ticketservice.core.room.RoomService;
 import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.user.UserService;
 import com.epam.training.ticketservice.core.user.model.UserDto;

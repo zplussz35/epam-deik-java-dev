@@ -1,7 +1,5 @@
 package com.epam.training.ticketservice.core.movie.model;
 
-
-
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 

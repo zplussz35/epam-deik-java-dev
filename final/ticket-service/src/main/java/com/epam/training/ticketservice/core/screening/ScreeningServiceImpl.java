@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor
-public class ScreeningServiceImpl implements ScreeningService{
+public class ScreeningServiceImpl implements ScreeningService {
 
 	private final ScreeningRepository screeningRepository;
 
@@ -36,7 +36,7 @@ public class ScreeningServiceImpl implements ScreeningService{
 	}
 
 	@Override
-	public Integer deleteScreening(String movieTitle,String roomName, String startTime) {
+	public Integer deleteScreening(String movieTitle, String roomName, String startTime) {
 		Integer deletedId = screeningRepository.deleteByMovieTitle(movieTitle);
 		Objects.requireNonNull(deletedId, "'" + movieTitle + "' titled movie screening was not found!");
 		return deletedId;

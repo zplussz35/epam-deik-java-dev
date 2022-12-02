@@ -2,9 +2,7 @@ package com.epam.training.ticketservice.core.screening.model;
 
 import java.time.LocalDateTime;
 
-import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
-import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.room.persistence.entity.Room;
 
 import lombok.EqualsAndHashCode;

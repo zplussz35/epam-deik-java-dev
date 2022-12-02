@@ -88,16 +88,15 @@ public class ScreeningCommand {
 						(endTime.isAfter(actualStartTime) && endTime.isBefore(actualEndTime) ||
 								(startTime.isBefore(actualStartTime) && endTime.isAfter(actualEndTime)))
 				) {
-					throw  new IllegalArgumentException("There is an overlapping screening!");
+					throw new IllegalArgumentException("There is an overlapping screening!");
 				} else if ((startTime.isAfter(actualEndTime) && startTime.isBefore(actualEndTimePlusBreak)) ||
 						(endTime.isAfter(actualEndTime) && endTime.isBefore(actualEndTimePlusBreak))) {
-					throw new IllegalArgumentException("This would start in the break period after another screening in this room");
+					throw new IllegalArgumentException(
+							"This would start in the break period after another screening in this room");
 				}
 			}
 		}
 	}
-
-
 
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "delete screening ", value = "Delete screening.")

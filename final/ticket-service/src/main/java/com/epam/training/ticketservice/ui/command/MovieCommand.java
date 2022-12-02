@@ -1,5 +1,13 @@
 package com.epam.training.ticketservice.ui.command;
 
+import java.util.Objects;
+import java.util.Optional;
+
+import org.springframework.shell.Availability;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
+
 import com.epam.training.ticketservice.core.movie.MovieService;
 import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.user.UserService;
@@ -7,14 +15,6 @@ import com.epam.training.ticketservice.core.user.model.UserDto;
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
 
 import lombok.AllArgsConstructor;
-
-import org.springframework.shell.Availability;
-import org.springframework.shell.standard.ShellComponent;
-import org.springframework.shell.standard.ShellMethod;
-import org.springframework.shell.standard.ShellMethodAvailability;
-
-import java.util.Objects;
-import java.util.Optional;
 
 @ShellComponent
 @AllArgsConstructor
@@ -27,8 +27,9 @@ public class MovieCommand {
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "create movie ", value = "create new movie.")
 	public MovieDto createMovie(String title, String genre, int length) {
-		if (title == null || genre == null || length < 1){
-			throw new IllegalArgumentException("You should add 3 arguments: movie title, genre, length in minutes (should be larger than 0)");
+		if (title == null || genre == null || length < 1) {
+			throw new IllegalArgumentException(
+					"You should add 3 arguments: movie title, genre, length in minutes (should be larger than 0)");
 		}
 
 		MovieDto movieDto = MovieDto.builder()
@@ -44,8 +45,9 @@ public class MovieCommand {
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "update movie ", value = "Update existing movie.")
 	public MovieDto updateMovie(String title, String genre, int length) {
-		if (title == null || genre == null || length < 1){
-			throw new IllegalArgumentException("You should add 3 arguments: movie title, genre, length in minutes (should be larger than 0)");
+		if (title == null || genre == null || length < 1) {
+			throw new IllegalArgumentException(
+					"You should add 3 arguments: movie title, genre, length in minutes (should be larger than 0)");
 		}
 
 		MovieDto movieDto = MovieDto.builder()
@@ -60,7 +62,7 @@ public class MovieCommand {
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "delete movie ", value = "Delete existing movie.")
 	public Integer deleteMovie(String title) {
-		Objects.requireNonNull(title,"Title should not be empty!");
+		Objects.requireNonNull(title, "Title should not be empty!");
 		return movieService.deleteMovie(title);
 
 	}
