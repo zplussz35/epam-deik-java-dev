@@ -89,8 +89,8 @@ public class ScreeningCommand {
 								(startTime.isBefore(actualStartTime) && endTime.isAfter(actualEndTime)))
 				) {
 					throw new IllegalArgumentException("There is an overlapping screening!");
-				} else if ((startTime.isAfter(actualEndTime) && startTime.isBefore(actualEndTimePlusBreak)) ||
-						(endTime.isAfter(actualEndTime) && endTime.isBefore(actualEndTimePlusBreak))) {
+				} else if (startTime.isAfter(actualEndTime) &&
+						startTime.isBefore(actualEndTimePlusBreak)) {
 					throw new IllegalArgumentException(
 							"This would start in the break period after another screening in this room");
 				}
