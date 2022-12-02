@@ -34,7 +34,7 @@ public class UserCommand {
     }
 
     @ShellMethod(key = "describe account", value = "Get Administrator information")
-    public String print() {
+    public String describe() {
         Optional<UserDto> user = userService.describe();
         if (user.isEmpty()) {
             return "You are not signed in!";

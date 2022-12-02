@@ -1,16 +1,22 @@
 package com.epam.training.ticketservice.ui.command;
 
 import java.util.Objects;
+import java.util.Optional;
 
+import org.springframework.shell.Availability;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
+
+import com.epam.training.ticketservice.core.room.RoomService;
 
 import com.epam.training.ticketservice.core.movie.MovieService;
 import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.room.RoomService;
 import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.user.UserService;
+import com.epam.training.ticketservice.core.user.model.UserDto;
+import com.epam.training.ticketservice.core.user.persistence.entity.User;
 
 import lombok.AllArgsConstructor;
 
@@ -20,6 +26,8 @@ public class RoomCommand {
 
 	private final RoomService roomService;
 
+	private final UserService userService;
+
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "create room ", value = "create new room.")
 	public RoomDto createRoom(String name, int rowCount, int columnCount) {
@@ -27,6 +35,7 @@ public class RoomCommand {
 			throw new IllegalArgumentException(
 					"You should add 3 arguments: room name, row count and column count (should be larger than 0)");
 		}
+
 		RoomDto roomDto = RoomDto.builder()
 				.withName(name)
 				.withRowCount(rowCount)
@@ -55,7 +64,7 @@ public class RoomCommand {
 
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "delete room ", value = "Delete existing room.")
-	public RoomDto deleteRoom(String name) {
+	public Integer deleteRoom(String name) {
 		Objects.requireNonNull(name, "Room name should not be empty!");
 		return roomService.deleteRoom(name);
 
@@ -69,5 +78,12 @@ public class RoomCommand {
 		StringBuilder result = new StringBuilder();
 		roomService.getRoomList().forEach(roomDto -> result.append(roomDto).append("\n"));
 		return result.toString();
+	}
+
+	private Availability isAvailable() {
+		Optional<UserDto> user = userService.describe();
+		return user.isPresent() && user.get().getRole() == User.Role.ADMIN
+				? Availability.available()
+				: Availability.unavailable("You are not an admin!");
 	}
 }

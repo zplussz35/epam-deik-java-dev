@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.finance.bank;
+/*package com.epam.training.ticketservice.core.finance.bank;
 
 import com.epam.training.ticketservice.core.finance.bank.model.CurrencyPair;
 
@@ -25,3 +25,4 @@ public class Bank {
                 : Optional.ofNullable(exchangeRateMap.get(currencyPair));
     }
 }
+*/

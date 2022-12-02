@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.warehouse;
+/*package com.epam.training.ticketservice.core.warehouse;
 
 
 
@@ -14,3 +14,5 @@ public class WarehouseService implements CheckoutObserver {
         System.out.println("WarehouseService handleOrder method is called!");
     }
 }
+
+ */

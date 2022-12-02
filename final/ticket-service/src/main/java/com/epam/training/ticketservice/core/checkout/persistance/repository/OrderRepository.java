@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.persistance.repository;
+/*package com.epam.training.ticketservice.core.checkout.persistance.repository;
 
 import com.epam.training.ticketservice.core.checkout.persistance.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,3 +11,4 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 
     List<Order> findByUserUsername(String userName);
 }
+*/

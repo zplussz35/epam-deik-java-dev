@@ -59,10 +59,10 @@ public class RoomServiceImpl implements RoomService {
 	}
 
 	@Override
-	public RoomDto deleteRoom(String name) {
-		Room room = roomRepository.deleteByName(name);
-		Objects.requireNonNull(room, "'" + name + "' room was not found!");
-		return convertEntityToDto(room);
+	public Integer deleteRoom(String name) {
+		Integer deletedId = roomRepository.deleteByName(name);
+		Objects.requireNonNull(deletedId, "'" + name + "' room was not found!");
+		return deletedId;
 	}
 
 	private RoomDto convertEntityToDto(Room room) {

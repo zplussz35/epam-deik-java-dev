@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.finance.money;
+/*package com.epam.training.ticketservice.core.finance.money;
 
 import com.epam.training.ticketservice.core.finance.bank.Bank;
 import com.epam.training.ticketservice.core.finance.bank.model.CurrencyPair;
@@ -40,3 +40,6 @@ public class Money {
         return new Money(amount * exchangeRate, currencyTo);
     }
 }
+
+
+ */

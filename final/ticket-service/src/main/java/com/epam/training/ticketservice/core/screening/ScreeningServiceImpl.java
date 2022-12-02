@@ -36,10 +36,10 @@ public class ScreeningServiceImpl implements ScreeningService{
 	}
 
 	@Override
-	public ScreeningDto deleteScreening(String movieTitle,String roomName, String startTime) {
-		Screening screening = screeningRepository.deleteByMovieTitle(movieTitle);
-		Objects.requireNonNull(screening, "'" + movieTitle + "' titled movie screening was not found!");
-		return convertEntityToDto(screening);
+	public Integer deleteScreening(String movieTitle,String roomName, String startTime) {
+		Integer deletedId = screeningRepository.deleteByMovieTitle(movieTitle);
+		Objects.requireNonNull(deletedId, "'" + movieTitle + "' titled movie screening was not found!");
+		return deletedId;
 	}
 
 	private ScreeningDto convertEntityToDto(Screening screening) {

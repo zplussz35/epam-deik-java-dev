@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.persistance.model;
+/*package com.epam.training.ticketservice.core.checkout.persistance.model;
 
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
 import lombok.AllArgsConstructor;
@@ -29,3 +29,4 @@ public class Order {
     private Double grossPriceAmount;
     private String grossPriceCurrencyCode;
 }
+*/

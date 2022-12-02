@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.impl;
+/*package com.epam.training.ticketservice.core.checkout.impl;
 
 import com.epam.training.ticketservice.core.checkout.CheckoutObserver;
 import com.epam.training.ticketservice.core.checkout.model.OrderDto;
@@ -17,3 +17,4 @@ public class CheckoutObservable {
         observerList.forEach(observer -> observer.handleOrder(orderDto));
     }
 }
+*/

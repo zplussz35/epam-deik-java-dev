@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.finance.bank.model;
+/*package com.epam.training.ticketservice.core.finance.bank.model;
 
 import lombok.Value;
 
@@ -10,3 +10,4 @@ public class CurrencyPair {
     private final Currency currencyFrom;
     private final Currency currencyTo;
 }
+*/

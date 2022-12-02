@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.persistance.model;
+/*package com.epam.training.ticketservice.core.checkout.persistance.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,3 +23,4 @@ public class OrderItem {
     private Double netPriceAmount;
     private String netPriceCurrencyCode;
 }
+*/

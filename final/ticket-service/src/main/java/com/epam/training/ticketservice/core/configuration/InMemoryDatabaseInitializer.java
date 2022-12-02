@@ -1,6 +1,6 @@
 package com.epam.training.ticketservice.core.configuration;
 
-import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
+
 import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
 import com.epam.training.ticketservice.core.user.persistence.repository.UserRepository;

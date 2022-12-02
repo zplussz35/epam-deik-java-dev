@@ -1,10 +1,7 @@
 package com.epam.training.ticketservice.core.movie.model;
 
-import java.util.Objects;
 
-import com.epam.training.ticketservice.core.finance.money.Money;
 
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
 
@@ -51,6 +48,6 @@ public class MovieDto {
 
 	@Override
 	public String toString() {
-		return title + " (" + genre + ", " + length + "minutes)";
+		return title + " (" + genre + ", " + length + " minutes)";
 	}
 }

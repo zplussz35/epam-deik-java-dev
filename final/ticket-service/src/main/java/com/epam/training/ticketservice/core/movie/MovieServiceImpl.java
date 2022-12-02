@@ -27,7 +27,7 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	public Movie findMovieByTitle(String title) {
+	public Movie findByTitle(String title) {
 		Movie movie = movieRepository.findByTitle(title);
 		if (movie == null) {
 			throw new IllegalArgumentException("Movie with title: '" + title + "' not found!");
@@ -57,10 +57,10 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	public MovieDto deleteMovie(String title) {
-		Movie movie = movieRepository.deleteByTitle(title);
-		Objects.requireNonNull(movie, "'" + title + "' movie was not found!");
-		return convertEntityToDto(movie);
+	public Integer deleteMovie(String title) {
+		Integer deletedId = movieRepository.deleteByTitle(title);
+		Objects.requireNonNull(deletedId, "'" + title + "' movie was not found!");
+		return deletedId;
 	}
 
 	private MovieDto convertEntityToDto(Movie movie) {

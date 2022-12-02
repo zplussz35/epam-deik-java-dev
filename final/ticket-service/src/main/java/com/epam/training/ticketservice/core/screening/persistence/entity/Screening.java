@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.xml.stream.events.StartDocument;
 
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
@@ -23,8 +24,10 @@ public class Screening {
 	@GeneratedValue
 	private Integer id;
 
+	@OneToOne
 	private Movie movie;
 
+	@OneToOne
 	private Room room;
 
 	private LocalDateTime startTime;

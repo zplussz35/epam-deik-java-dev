@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.finance.money.comparator;
+/*package com.epam.training.ticketservice.core.finance.money.comparator;
 
 import com.epam.training.ticketservice.core.finance.bank.Bank;
 import com.epam.training.ticketservice.core.finance.money.Money;
@@ -17,3 +17,4 @@ public class MoneyComparator implements Comparator<Money> {
         return Double.compare(money1.getAmount(), convertedMoney.getAmount());
     }
 }
+ */

@@ -36,6 +36,7 @@ public class MovieCommand {
 				.withGenre(genre)
 				.withLength(length)
 				.build();
+
 		movieService.createMovie(movieDto);
 		return movieDto;
 	}
@@ -58,7 +59,7 @@ public class MovieCommand {
 
 	@ShellMethodAvailability("isAvailable")
 	@ShellMethod(key = "delete movie ", value = "Delete existing movie.")
-	public MovieDto deleteMovie(String title) {
+	public Integer deleteMovie(String title) {
 		Objects.requireNonNull(title,"Title should not be empty!");
 		return movieService.deleteMovie(title);
 

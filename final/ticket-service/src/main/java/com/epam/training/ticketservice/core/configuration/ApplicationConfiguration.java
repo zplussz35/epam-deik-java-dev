@@ -1,9 +1,5 @@
 /*package com.epam.training.ticketservice.core.configuration;
 
-import com.epam.training.ticketservice.core.cart.Cart;
-import com.epam.training.ticketservice.core.cart.grossprice.GrossPriceCalculator;
-import com.epam.training.ticketservice.core.cart.grossprice.impl.GrossPriceCalculatorImpl;
-import com.epam.training.ticketservice.core.cart.grossprice.impl.HungarianTaxGrossPriceDecorator;
 import com.epam.training.ticketservice.core.finance.bank.Bank;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +12,7 @@ public class ApplicationConfiguration {
         return new Bank();
     }
 
-    @Bean
+    /*@Bean
     public Cart cart(Bank bank) {
         return Cart.createEmptyCart(bank);
     }

@@ -1,4 +1,4 @@
-package com.epam.training.ticketservice.core.checkout.model;
+/*package com.epam.training.ticketservice.core.checkout.model;
 
 import com.epam.training.ticketservice.core.finance.money.Money;
 import com.epam.training.ticketservice.core.movie.model.MovieDto;
@@ -13,3 +13,4 @@ public class OrderDto {
     private final Money netPrice;
     private final Money grossPrice;
 }
+*/

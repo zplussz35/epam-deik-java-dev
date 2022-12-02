@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/epam-deik-java-dev.iml" filepath="$PROJECT_DIR$/.idea/epam-deik-java-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/epam-deik-java-dev123.iml" filepath="$PROJECT_DIR$/.idea/epam-deik-java-dev123.iml" />
       <module fileurl="file://$PROJECT_DIR$/money/money.iml" filepath="$PROJECT_DIR$/money/money.iml" />
       <module fileurl="file://$PROJECT_DIR$/taxi/taxi.iml" filepath="$PROJECT_DIR$/taxi/taxi.iml" />
       <module fileurl="file://$PROJECT_DIR$/final/ticket-service/ticket-service.iml" filepath="$PROJECT_DIR$/final/ticket-service/ticket-service.iml" />

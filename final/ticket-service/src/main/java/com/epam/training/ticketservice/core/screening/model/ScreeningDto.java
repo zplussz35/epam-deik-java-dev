@@ -54,10 +54,8 @@ public class ScreeningDto {
 
 	@Override
 	public String toString() {
-		return "ScreeningDto{" +
-				"movie=" + movie +
-				", room=" + room +
-				", startTime=" + startTime +
-				'}';
+		return movie.getTitle() +
+				" (" + movie.getGenre() +
+				", " + movie.getLength() + "), screened in room " + room.getName() + ", at " + startTime.toString();
 	}
 }
